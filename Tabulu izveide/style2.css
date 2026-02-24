@@ -1,0 +1,42 @@
+body {
+    font-family: Times New Roman;
+}
+h1{
+    text-align: center;
+    color: #0000ff;
+}
+.valoda {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    border-top: solid 3px #0000ff;
+    border-bottom: solid 3px #0000ff;
+}
+.valoda td{
+    color: black;
+    font-size: 16pt;
+    width: 50%;
+}
+.valoda2 td{
+    background-color: #3f5eba;
+    color: white;
+}
+.tabula{
+width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.tabula tr{
+    width: 20%;
+    background-color: #3f5eba;
+    color: white;
+}
+.tabula tr:nth-child(odd){
+    background-color: #e0e0e0;
+    font-weight: bold;
+    font-size: 10pt;
+    color: black;
+}
+.tabula2 td{
+    background-color: #e0e0e0;
+}
