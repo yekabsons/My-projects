@@ -1,0 +1,66 @@
+.table-responsive {
+  border-radius: 12px;
+  overflow: hidden; // Nodrošina, ka tabulas stūri paliek smuki noapaļoti
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+
+  table {
+    margin-bottom: 0;
+
+    th {
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      border-bottom: none;
+    }
+
+    tbody tr {
+      transition: all 0.2s ease-in-out;
+
+      td {
+        vertical-align: middle;
+        border-bottom: 1px solid #f4f6f8;
+        transition: color 0.2s;
+      }
+
+      // Hover efekts parastajām rindām
+      &:hover {
+        td {
+          background-color: transparent; // Noņemam Bootstrap noklusējumu
+          color: $primary-green;
+        }
+        background-color: rgba($primary-green, 0.05) !important;
+      }
+    }
+
+    // Īpašs dizains Premium (BMW) rindai
+    .table-success {
+      background-color: rgba($primary-green, 0.08) !important;
+
+      td {
+        border-bottom: none;
+      }
+
+      // Pievienojam zaļu līniju kreisajā malā, lai vēl vairāk izceltu
+      td:first-child {
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 5px;
+          background-color: $primary-green;
+          border-radius: 0 4px 4px 0;
+        }
+      }
+
+      &:hover {
+        background-color: rgba($primary-green, 0.15) !important;
+        transform: scale(1.01); // Nedaudz palielinās uzbraucot ar peli
+      }
+    }
+  }
+}

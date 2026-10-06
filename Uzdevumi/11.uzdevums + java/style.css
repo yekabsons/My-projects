@@ -1,0 +1,114 @@
+body {    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.calculator {
+    width: 520px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.options-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+}
+
+.options-table th {
+    background-color: #5bb3a1;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    text-align: left;
+    border: 1px solid #000;
+}
+
+.options-table td {
+    padding: 8px 12px;
+}
+
+.col-name { width: 50%; }
+.col-price { width: 30%; text-align: left; }
+.col-choice { width: 20%; text-align: center; }
+.options-table td.col-choice { text-align: center; }
+
+.box-border {
+    border: 1px solid #000;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-row:last-child {
+    margin-bottom: 0;
+}
+
+.input-row label {
+    width: 50%;
+}
+
+.input-row input[type="number"],
+.input-row select {
+    width: 45%;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+.total-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0;
+}
+
+.total-label {
+    font-size: 16px;
+    width: 30%;
+}
+
+.total-sum {
+    font-size: 16px;
+    width: 40%;
+    text-align: center;
+}
+
+#calculate-btn {
+    background-color: #3f7b70;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 25%;
+}
+
+#calculate-btn:hover {
+    background-color: #2f5c53;
+}
+.main-title {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: #2b6a60;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.main-title .highlight {
+    background-color: #2b6a60;
+    color: white;
+    padding: 2px 8px;
+}

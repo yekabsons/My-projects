@@ -1,0 +1,148 @@
+// Importējam Google Fontu modernākam izskatam
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+$primary-green: #198754; // Saskan ar Bootstrap btn-success
+$hover-green: #146c43;
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+// Unikāls dizains Hero sekcijai
+.hero-section {
+  height: 70vh;
+  min-height: 500px;
+  // Šeit vēlāk varēsi ielikt reālu fona attēlu
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1920&auto=format&fit=crop') no-repeat center center/cover;
+
+  .shadow-text {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .btn-success {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(25, 135, 84, 0.4) !important;
+    }
+  }
+}
+
+// Auto kartīšu animācijas
+.car-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    background-color: #e9ecef;
+  }
+
+  .price-badge {
+    background-color: rgba($primary-green, 0.1);
+    color: $primary-green;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: 600;
+  }
+}
+// 1. Vispirms importējam mainīgos, lai pārējie faili tos redz
+@import 'variables';
+
+// 2. Importējam komponentes
+@import 'navbar';
+@import 'hero';
+@import 'cards';
+@import 'prices';
+// 3. Globālie stili, kas attiecas uz visu lapu
+body {
+  font-family: 'Inter', sans-serif;
+}
+// Mainīgie
+$primary-color: #198754; // Bootstrap success krāsa
+$transition-speed: 0.3s;
+
+// Kartīšu stils
+.car-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform $transition-speed ease, box-shadow $transition-speed ease;
+
+  // Attēla animācija
+  .card-img-top {
+    height: 220px;
+    object-fit: cover;
+    transition: transform $transition-speed ease;
+  }
+
+  // Hover efekts visai kartītei
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+
+    .card-img-top {
+      transform: scale(1.05);
+    }
+  }
+
+  // Cenas "bļemba"
+  .price-badge {
+    background-color: rgba($primary-color, 0.1);
+    color: $primary-color;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+}
+
+// Tava BMW izcelšana (ja gribi)
+.border-success {
+  border: 2px solid $primary-color !important;
+}
+// Tumšā režīma (Dark Mode) pielāgojumi
+[data-bs-theme="dark"] {
+  // Kartīšu krāsas
+  .car-card {
+    background-color: #212529;
+    border-color: #343a40;
+    color: #f8f9fa;
+
+    .card-body {
+      background-color: #212529;
+    }
+
+    .text-muted {
+      color: #adb5bd !important;
+    }
+  }
+
+  // Pielāgojam zaļo rindu (BMW), lai tā nekož acīs tumsā
+  .table-success {
+    --bs-table-bg: rgba(25, 135, 84, 0.2); // Caurspīdīgi zaļš
+    --bs-table-color: #fff;
+
+    td {
+      border-bottom-color: rgba(25, 135, 84, 0.4);
+    }
+  }
+
+  // Hero sekcijas un ēnu pielāgojumi
+  .shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.5) !important;
+  }
+
+  .bg-white {
+    background-color: #212529 !important;
+  }
+}

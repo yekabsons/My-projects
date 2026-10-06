@@ -1,0 +1,120 @@
+$primary-width: 90%;
+$breakpoint: 1024px;
+$footer-bg: #4a2b0f;
+
+.container {
+  width: $primary-width;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  border-bottom: 2px solid #ccc;
+  padding: 10px 0;
+}
+
+footer {
+  background-color: $footer-bg;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+.main-content {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.left-wrapper {
+  display: flex;
+  flex: 3;
+  gap: 20px;
+
+  .interview-section {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+
+    .content-left, .content-right {
+      flex: 1;
+    }
+  }
+
+  .ad-column {
+    width: 100px;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}
+
+.leader-img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.right-wrapper {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+
+  figure {
+    flex: 1 1 calc(50% - 15px);
+    margin: 0;
+
+    img {
+      width: 100%; // 4.5.4. punkts
+      display: block;
+    }
+
+    figcaption {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint) {
+
+  .main-content {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .left-wrapper {
+    width: 100%;
+
+    .interview-section {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .ad-column {
+      display: none !important;
+    }
+  }
+
+  .right-wrapper {
+    width: 100%;
+
+    .gallery figure {
+      flex: 1 1 100%;
+    }
+  }
+}

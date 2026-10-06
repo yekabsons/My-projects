@@ -1,0 +1,20 @@
+body { background-color: #f8f9fa; padding-top: 50px; }
+.calc-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.btn-custom { background-color: #5bc0de; color: white; border: none; }
+.btn-custom:hover { background-color: #46b8da; color: white; }
+.multiplication-box {
+    display: inline-block;
+    background-color: #87ceeb;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+    width: 100px;
+    font-size: 0.9rem;
+    vertical-align: top;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}

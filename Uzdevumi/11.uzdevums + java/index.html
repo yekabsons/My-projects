@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamma's Pica picērija</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="calculator">
+    <h1 class="main-title"><span class="highlight">Mamma's Pica</span> picērija</h1>
+    <table class="options-table">
+        <thead>
+        <tr>
+            <th class="col-name">Izmērs</th>
+            <th class="col-price">Cena</th>
+            <th class="col-choice">Izvēle</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Mazā</td>
+            <td>8.00 €</td>
+            <td class="col-choice"><input type="radio" name="size" value="8.00"></td>
+        </tr>
+        <tr>
+            <td>Vidējā</td>
+            <td>10.00 €</td>
+            <td class="col-choice"><input type="radio" name="size" value="10.00"></td>
+        </tr>
+        <tr>
+            <td>Lielā</td>
+            <td>12.00 €</td>
+            <td class="col-choice"><input type="radio" name="size" value="12.00"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="options-table">
+        <thead>
+        <tr>
+            <th class="col-name">Pildījums</th>
+            <th class="col-price">Cena</th>
+            <th class="col-choice">Izvēle</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Ananasi</td>
+            <td>1.50 €</td>
+            <td class="col-choice"><input type="checkbox" name="topping" value="1.50"></td>
+        </tr>
+        <tr>
+            <td>Šampinjoni</td>
+            <td>1.00 €</td>
+            <td class="col-choice"><input type="checkbox" name="topping" value="1.00"></td>
+        </tr>
+        <tr>
+            <td>Olīvas</td>
+            <td>0.75 €</td>
+            <td class="col-choice"><input type="checkbox" name="topping" value="0.75"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="order-details box-border">
+        <div class="input-row">
+            <label>Ievadi izvēlēto komplektu skaitu:</label>
+            <input type="number" id="count" value="1" min="1">
+        </div>
+        <div class="input-row">
+            <label>Piegādātājs</label>
+            <select id="delivery">
+                <option value="" disabled selected>Izvēlies piegādes veidu</option>
+                <option value="0.00">Paņemt picērijā - 0.00€</option>
+                <option value="1.00">Mammas pica - 1.00€</option>
+                <option value="3.50">Taxi - 3.50€</option>
+                <option value="2.00">Bolt - 2.00€</option>
+                <option value="2.10">Wolt - 2.10€</option>
+            </select>
+        </div>
+        <div class="input-row">
+            <label>Pilsēta</label>
+            <select id="city">
+                <option value="" disabled selected>Izvēlieties pilsētu</option>
+                <option value="jelgava">Jelgava - Akcija: katra nākošā pica ar 20% atlaidi katrai</option>
+                <option value="dobele">Dobele - Akcija: pērc 3 un maksā par 2</option>
+                <option value="bauska">Bauska - Patreiz nav akciju</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="total-section box-border">
+        <span class="total-label">Kopā:</span>
+        <span class="total-sum" id="total-price">0.00 €</span>
+        <button id="calculate-btn">Rēķināt</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

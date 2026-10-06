@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.hero-section {
+  height: 70vh;
+  min-height: 500px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1920&auto=format&fit=crop") no-repeat center center/cover;
+}
+.hero-section .shadow-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.hero-section .btn-success {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-section .btn-success:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(25, 135, 84, 0.4) !important;
+}
+
+.car-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+.car-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  background-color: #e9ecef;
+}
+.car-card .price-badge {
+  background-color: rgba(25, 135, 84, 0.1);
+  color: #198754;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.navbar-brand {
+  transition: opacity 0.3s ease;
+}
+.navbar-brand:hover {
+  opacity: 0.8;
+}
+
+.hero-section {
+  height: 70vh;
+  min-height: 500px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1920&auto=format&fit=crop") no-repeat center center/cover;
+}
+.hero-section .shadow-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.hero-section .btn-success {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-section .btn-success:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(25, 135, 84, 0.4) !important;
+}
+
+.car-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+.car-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  background-color: #e9ecef;
+}
+.car-card .price-badge {
+  background-color: rgba(25, 135, 84, 0.1);
+  color: #198754;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.table-responsive {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+}
+.table-responsive table {
+  margin-bottom: 0;
+}
+.table-responsive table th {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border-bottom: none;
+}
+.table-responsive table tbody tr {
+  transition: all 0.2s ease-in-out;
+}
+.table-responsive table tbody tr td {
+  vertical-align: middle;
+  border-bottom: 1px solid #f4f6f8;
+  transition: color 0.2s;
+}
+.table-responsive table tbody tr:hover td {
+  background-color: transparent;
+  color: #198754;
+}
+.table-responsive table tbody tr:hover {
+  background-color: rgba(25, 135, 84, 0.05) !important;
+}
+.table-responsive table .table-success {
+  background-color: rgba(25, 135, 84, 0.08) !important;
+}
+.table-responsive table .table-success td {
+  border-bottom: none;
+}
+.table-responsive table .table-success td:first-child {
+  position: relative;
+}
+.table-responsive table .table-success td:first-child::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background-color: #198754;
+  border-radius: 0 4px 4px 0;
+}
+.table-responsive table .table-success:hover {
+  background-color: rgba(25, 135, 84, 0.15) !important;
+  transform: scale(1.01);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.car-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.car-card .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+.car-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+.car-card .price-badge {
+  background-color: rgba(25, 135, 84, 0.1);
+  color: #198754;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.border-success {
+  border: 2px solid #198754 !important;
+}
+
+[data-bs-theme=dark] .car-card {
+  background-color: #212529;
+  border-color: #343a40;
+  color: #f8f9fa;
+}
+[data-bs-theme=dark] .car-card .card-body {
+  background-color: #212529;
+}
+[data-bs-theme=dark] .car-card .text-muted {
+  color: #adb5bd !important;
+}
+[data-bs-theme=dark] .table-success {
+  --bs-table-bg: rgba(25, 135, 84, 0.2);
+  --bs-table-color: #fff;
+}
+[data-bs-theme=dark] .table-success td {
+  border-bottom-color: rgba(25, 135, 84, 0.4);
+}
+[data-bs-theme=dark] .shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5) !important;
+}
+[data-bs-theme=dark] .bg-white {
+  background-color: #212529 !important;
+}
+
+/*# sourceMappingURL=style.css.map */

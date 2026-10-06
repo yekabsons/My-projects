@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konta izveide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2 id="greeting">Labdien!</h2>
+    <h5>Jauna lietotāja konta izveide</h5>
+
+    <form id="regForm" novalidate>
+        <div class="mb-3">
+            <label for="vards" class="form-label">Lietotāja vārds</label>
+            <input type="text" class="form-control" id="vards" placeholder="Vārds">
+            <div class="invalid-feedback">Lūdzu, ievadiet vārdu!</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="epasts" class="form-label">E-pasta adrese</label>
+            <input type="email" class="form-control" id="epasts" placeholder="E-pasts">
+            <div class="invalid-feedback">E-pasta adrese nav pareiza</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="parole" class="form-label">Parole</label>
+            <input type="password" class="form-control" id="parole" placeholder="Parole">
+            <div class="invalid-feedback">Parolei jābūt vismaz 6 simbolus garai un jāsatur vismaz 1 cipars!</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="parole2" class="form-label">Parole atkārtoti</label>
+            <input type="password" class="form-control" id="parole2" placeholder="Parole atkārtoti">
+            <div class="invalid-feedback">Parole nesakrīt!</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="valsts" class="form-label">Valsts</label>
+            <select class="form-select" id="valsts">
+                <option value="" selected disabled>Izvēlieties valsti...</option>
+                <option value="LV">Latvija</option>
+                <option value="LT">Lietuva</option>
+                <option value="EE">Igaunija</option>
+            </select>
+            <div class="invalid-feedback">Lūdzu, izvēlieties valsti!</div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Dzimums</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="dzimums" id="dz_virietis" value="Vīrietis">
+                <label class="form-check-label" for="dz_virietis">Vīrietis</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="dzimums" id="dz_sieviete" value="Sieviete">
+                <label class="form-check-label" for="dz_sieviete">Sieviete</label>
+            </div>
+            <div class="invalid-feedback d-block" id="dzimums-error" style="display: none;">Lūdzu, izvēlieties dzimumu!</div>
+        </div>
+
+        <div class="mb-4 form-check">
+            <input type="checkbox" class="form-check-input" id="noteikumi">
+            <label class="form-check-label" for="noteikumi">Piekrītu lietošanas noteikumiem</label>
+            <div class="invalid-feedback">Jums jāpiekrīt noteikumiem!</div>
+        </div>
+
+        <button type="submit" class="btn btn-custom">Apstiprināt</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

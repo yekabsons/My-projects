@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header stils */
+header {
+    background-color: #5ba3c1;
+    color: white;
+    padding: 40px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.logo {
+    height: 150px;
+}
+
+/* Galvenais saturs */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    color: #a52a2a;
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+
+/* Flexbox režģis (1. attēls) */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    flex: 1 1 30%; /* Trīs kolonnas  */
+    min-width: 300px;
+    background: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.icon-box {
+    background-color: #3e8acc;
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box img {
+    width: 36px;
+    height: 36px;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h3 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.address {
+    font-style: italic;
+    font-size: 0.8rem;
+    text-align: right;
+    margin-top: 10px;
+    color: #666;
+}
+
+
+footer {
+    background-color: #7a1b1b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+
+@media (max-width: 900px) {
+    .grid-container {
+        flex-direction: column;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .header-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    header ul {
+        display: none;
+    }
+}
