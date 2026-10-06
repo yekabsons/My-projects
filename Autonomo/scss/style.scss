@@ -1,0 +1,597 @@
+$primary: #2563eb;
+$primary-dark: #1d4ed8;
+$dark: #111827;
+$text: #374151;
+$light-text: #6b7280;
+$light-bg: #f8fafc;
+$white: #ffffff;
+$border: #e5e7eb;
+
+$container: 1200px;
+
+$radius: 14px;
+
+$transition: 0.3s ease;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $text;
+  background: $white;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(90%, $container);
+  margin: 0 auto;
+}
+
+
+// ==============================
+// HEADER
+// ==============================
+
+.header {
+  background: $white;
+  border-bottom: 1px solid $border;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  min-height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  color: $dark;
+
+  span {
+    color: $primary;
+  }
+}
+
+.nav-menu {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  li {
+    a {
+      color: $text;
+      font-weight: 500;
+      transition: $transition;
+
+      &:hover,
+      &.active {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.nav-button {
+  background: $primary;
+  color: $white;
+
+  padding: 11px 20px;
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  transition: $transition;
+
+  &:hover {
+    background: $primary-dark;
+    transform: translateY(-2px);
+  }
+}
+
+
+// ==============================
+// HERO
+// ==============================
+
+.hero {
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+
+  background:
+          linear-gradient(
+                          90deg,
+                          rgba(17, 24, 39, 0.95) 0%,
+                          rgba(17, 24, 39, 0.75) 45%,
+                          rgba(17, 24, 39, 0.2) 100%
+          ),
+          url("../images/car1.jpg") center / cover no-repeat;
+
+  color: $white;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 650px;
+}
+
+.hero-label {
+  color: #93c5fd;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.05;
+  margin-bottom: 25px;
+
+  span {
+    color: #60a5fa;
+  }
+}
+
+.hero-description {
+  max-width: 580px;
+  font-size: 18px;
+  color: #e5e7eb;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+
+  padding: 14px 24px;
+
+  border-radius: 8px;
+
+  font-weight: 700;
+
+  transition: $transition;
+}
+
+.btn-primary {
+  background: $primary;
+  color: $white;
+
+  &:hover {
+    background: $primary-dark;
+    transform: translateY(-2px);
+  }
+}
+
+.btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: $white;
+
+  &:hover {
+    background: $white;
+    color: $dark;
+  }
+}
+
+
+// ==============================
+// GENERAL SECTIONS
+// ==============================
+
+.cars-section,
+.advantages {
+  padding: 90px 0;
+}
+
+.how-section {
+  padding: 90px 0;
+  background: $light-bg;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  margin-bottom: 45px;
+
+  h2 {
+    color: $dark;
+    font-size: 38px;
+    line-height: 1.2;
+  }
+}
+
+.section-heading.centered {
+  display: block;
+  text-align: center;
+
+  max-width: 700px;
+  margin: 0 auto 50px;
+
+  > p:last-child {
+    margin-top: 10px;
+    color: $light-text;
+  }
+}
+
+.section-label {
+  color: $primary;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.view-all {
+  color: $primary;
+  font-weight: 700;
+
+  &:hover {
+    color: $primary-dark;
+  }
+}
+
+
+// ==============================
+// CARDS
+// ==============================
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.car-card {
+  background: $white;
+  border: 1px solid $border;
+  border-radius: $radius;
+  overflow: hidden;
+
+  transition: $transition;
+
+  &:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.car-image {
+  height: 230px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: $transition;
+  }
+
+  .car-card:hover & img {
+    transform: scale(1.05);
+  }
+}
+
+.car-info {
+  padding: 22px;
+}
+
+.car-type {
+  color: $primary;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.car-info h3 {
+  color: $dark;
+  font-size: 23px;
+  margin: 5px 0 15px;
+}
+
+.car-details {
+  display: flex;
+  gap: 15px;
+
+  color: $light-text;
+  font-size: 14px;
+
+  padding-bottom: 18px;
+  border-bottom: 1px solid $border;
+}
+
+.car-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 18px;
+
+  p {
+    color: $light-text;
+
+    strong {
+      color: $dark;
+      font-size: 24px;
+    }
+  }
+}
+
+.small-btn {
+  background: $dark;
+  color: $white;
+
+  padding: 9px 14px;
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: $transition;
+
+  &:hover {
+    background: $primary;
+  }
+}
+
+
+// ==============================
+// STEPS
+// ==============================
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.step {
+  background: $white;
+  padding: 35px;
+
+  border-radius: $radius;
+  border: 1px solid $border;
+
+  text-align: center;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: #dbeafe;
+  color: $primary;
+
+  font-weight: 800;
+}
+
+.step h3 {
+  color: $dark;
+  margin-bottom: 10px;
+}
+
+.step p {
+  color: $light-text;
+}
+
+
+// ==============================
+// ADVANTAGES
+// ==============================
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.advantage {
+  text-align: center;
+  padding: 25px;
+}
+
+.advantage-icon {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.advantage h3 {
+  color: $dark;
+  margin-bottom: 8px;
+}
+
+.advantage p {
+  color: $light-text;
+}
+
+
+// ==============================
+// FOOTER
+// ==============================
+
+.footer {
+  background: $dark;
+  color: $white;
+
+  padding: 50px 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+
+  padding-bottom: 35px;
+}
+
+.footer .logo {
+  color: $white;
+}
+
+.footer-content p {
+  color: #9ca3af;
+  margin-top: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+
+  a {
+    color: #d1d5db;
+    transition: $transition;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}
+
+.footer-bottom {
+  border-top: 1px solid #374151;
+  padding-top: 20px;
+
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+
+// ==============================
+// RESPONSIVE
+// ==============================
+
+@media (max-width: 900px) {
+
+  .nav-menu {
+    gap: 15px;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .cars-grid,
+  .steps {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .advantages-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+// ==============================
+// PAGE HERO
+// ==============================
+
+.page-hero {
+  padding: 100px 0;
+
+  background: $light-bg;
+
+  text-align: center;
+
+  h1 {
+    color: $dark;
+    font-size: clamp(40px, 5vw, 60px);
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+
+  p:last-child {
+    color: $light-text;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .navbar {
+    min-height: 70px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .section-heading {
+    display: block;
+
+    h2 {
+      font-size: 32px;
+    }
+
+    .view-all {
+      display: inline-block;
+      margin-top: 15px;
+    }
+  }
+
+  .cars-grid,
+  .steps,
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+  }
+}
