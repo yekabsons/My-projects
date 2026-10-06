@@ -1,0 +1,103 @@
+/* Image styling */
+section#about + .catalog-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.catalog-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Automatic Slider */
+.slider {
+    position: relative;
+    width: 50%;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    width: 200%; /* Adjust for 3 images */
+    animation: slide-animation 9s infinite; /* Adjusted for 3 seconds per slide (3 slides * 3 seconds = 9 seconds total) */
+}
+
+.slides img {
+    width: 100%; /* Full width of the slider */
+    height: 400px; /* Fixed height */
+    object-fit: cover; /* Ensures the images maintain their aspect ratio and cover the area */
+    flex:0 auto;
+}
+
+/* Keyframes for automatic sliding */
+@keyframes slide-animation {
+    0% { transform: translateX(0); }
+    33.33% { transform: translateX(-100%); }
+    66.66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    section#about + .catalog-image {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    section#about h2 {
+        font-size: 1.5rem;
+    }
+
+    section#about h3 {
+        font-size: 1.2rem;
+    }
+    section#about h4 {
+        font-size: 1.6rem;
+    }
+
+    section#about p {
+        font-size: 0.9rem;
+    }
+
+    .slider {
+        max-width: 100%;
+    }
+}
+/* Slideshow Section */
+/* Slideshow Section */
+#slideshow {
+    width: 100%; /* Full width */
+    margin-top: 20px; /* Space between main content and slider */
+    display: flex;
+    justify-content: center; /* Center align slider */
+}
+.slider {
+    position: relative;
+    width: 80%; /* Occupies 80% of parent width */
+    max-width: 800px; /* Restrict maximum width */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../photo/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div class="container">
+    <img src="../photo/bmw.jpeg" alt="BMW Logo" width="150" height="150">
+    <div id="status-message" class="message" style="display: none;"></div>
+    <h1>Register</h1>
+    <form id="registerForm" method="POST" action="../php/register_user.php" enctype="multipart/form-data">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required autocomplete="username" aria-label="Username">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email" aria-label="Email">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required autocomplete="new-password"
+               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}"
+               title="At least 1 uppercase, 1 lowercase, 1 number, 1 special character and 8+ characters"
+               aria-label="Password">
+
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm_password" name="confirm_password" required
+               oninput="checkPasswordMatch()" aria-label="Confirm Password">
+
+        <div id="password-match-error" style="color: red; display: none;">
+            Passwords do not match.
+        </div>
+
+        <div class="show-password-container">
+            <input type="checkbox" id="showPasswordCheckbox" class="show-password-checkbox" onclick="togglePasswordVisibility()" aria-label="Show Password">
+            <label for="showPasswordCheckbox">Show Password</label>
+        </div>
+
+        <button type="submit">Register</button>
+
+        <div class="nav-items">
+            <a href="login.html">Back to Login</a>
+        </div>
+    </form>
+</div>
+
+<script>
+    function togglePasswordVisibility() {
+        const pw1 = document.getElementById("password");
+        const pw2 = document.getElementById("confirm_password");
+        const type = pw1.type === "password" ? "text" : "password";
+        pw1.type = pw2.type = type;
+    }
+
+    function checkPasswordMatch() {
+        const pw1 = document.getElementById("password").value;
+        const pw2 = document.getElementById("confirm_password").value;
+        const error = document.getElementById("password-match-error");
+        error.style.display = pw1 !== pw2 ? "block" : "none";
+    }
+</script>
+<script>
+    function togglePasswordVisibility() {
+        const pw1 = document.getElementById("password");
+        const pw2 = document.getElementById("confirm_password");
+        const type = pw1.type === "password" ? "text" : "password";
+        pw1.type = pw2.type = type;
+    }
+
+    function checkPasswordMatch() {
+        const pw1 = document.getElementById("password").value;
+        const pw2 = document.getElementById("confirm_password").value;
+        const error = document.getElementById("password-match-error");
+        error.style.display = pw1 !== pw2 ? "block" : "none";
+    }
+
+    // Show error message and clear email if necessary
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get('status');
+    const clear = params.get('clear');
+    const messageDiv = document.getElementById("status-message");
+
+    if (status) {
+        let message = "";
+        let color = "";
+
+        switch (status) {
+            case "email_exists":
+                message = "This email is already registered. Please use a different email.";
+                color = "orange";
+                break;
+            case "username_exists":
+                message = "Username already taken. Please choose a different username.";
+                color = "orange";
+                break;
+            case "error":
+                message = "There was an error during registration. Please try again.";
+                color = "red";
+                break;
+        }
+
+        if (message) {
+            messageDiv.textContent = message;
+            messageDiv.style.display = "block";
+            messageDiv.style.color = "white";
+            messageDiv.style.backgroundColor = color;
+            messageDiv.style.padding = "10px";
+            messageDiv.style.marginBottom = "15px";
+            messageDiv.style.borderRadius = "5px";
+        }
+
+        if (clear === "email") {
+            const emailField = document.getElementById("email");
+            if (emailField) {
+                emailField.value = "";
+            }
+        }
+    }
+</script>
+</body>
+</html>

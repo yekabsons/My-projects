@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f5f7;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+header .header-content {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-content .logo-img {
+  height: 90px;
+}
+header .header-content nav a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+header .header-content nav a:hover {
+  color: #005bb5;
+}
+
+.grid-container {
+  width: 90%;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.city-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+.city-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.city-card .card-text {
+  padding-top: 15px;
+}
+.city-card .card-text h3 {
+  margin: 0 0 10px 0;
+  color: #005bb5;
+  font-size: 18px;
+}
+.city-card .card-text p {
+  margin: 0;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+footer {
+  margin-top: 50px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_MxgdJuUEYbEN6t6Sqwrm0ykgC_xmf7jitA&s");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  padding: 50px 0;
+  box-sizing: border-box;
+}
+footer .footer-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+.footer-grid .footer-col {
+  color: white;
+}
+.footer-grid .footer-col h4 {
+  color: #ffb700;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.footer-grid .footer-col p {
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.footer-grid .links-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-grid .links-col ul li {
+  margin-bottom: 10px;
+}
+.footer-grid .links-col ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+.footer-grid .links-col ul a:hover {
+  text-decoration: underline;
+  color: #ffb700;
+}
+
+@media (max-width: 1024px) {
+  .grid-container, .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 960px) {
+  .grid-container, .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  footer .footer-overlay {
+    padding: 30px 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
